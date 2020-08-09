@@ -1,0 +1,52 @@
+
+body{
+    background-color: yellow;
+}
+
+
+
+h1{
+    color: blue;
+    background-color: aquamarine;
+}
+
+input[type=text]{
+    width: 30%;
+    margin: 8px 0;
+    padding: 5px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+input[type=submit]{
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+input[type=reset]{
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+#date{
+    width: 16%;
+}
+#address{
+    width: 25%;
+    height: 100px;
+    margin-left: 1.5%;
+}
+select{
+    margin: 8px 0;
+    padding: 5px 20px;
+
+}
+#email{
+    margin-left: 2.3%;
+    width: 20%;
+}
+#phone{
+    margin-left: 0.1%;
+}
+label{
+    color: blue;
+}

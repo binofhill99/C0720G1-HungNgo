@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form01</title>
+    <link rel="stylesheet" href="../css/simpleform01.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <h1>SỞ THÍCH CỦA BẠN</h1>
+    <div>
+    <form action="#">
+        <label for="name" class="n">Họ và Tên</label>
+        <input type="text" id="name" name="yourname">
+        <br>
+        <label for="email" class="e">Email</label>
+        <input type="text" id="email" name="email">
+        <br>
+        <p>Sở thích</p>
+        <div class="pick">
+        <input type="checkbox" id="hobby1" name="hobby" value="thethao">
+        <label for="hobby1" class="h">Thể thao</label>
+        <input type="checkbox" id="hobby2" name="hobby" value="amnhac">
+        <label for="hobby2" class="h">Âm nhạc</label>
+        <input type="checkbox" id="hobby3" name="hobby" value="docsach">
+        <label for="hobby3" class="h">Đọc sách</label><br>
+        <input type="checkbox" id="hobby4" name="hobby" value="luotweb">
+        <label for="hobby4" class="h">Lướt web</label>
+        <input type="checkbox" id="hobby5" name="hobby" value="choigame">
+        <label for="hobby5" class="h">Chơi game</label>
+        <input type="checkbox" id="hobby6" name="hobby" value="dienanh">
+        <label for="hobby6" class="h">Điện ảnh</label><br>
+        <input type="checkbox" id="hobby7" name="hobby" value="dulich">
+        <label for="hobby7" class="h">Du lịch</label><br>
+        </div>
+        <input type="submit" name="submit" class="button" value="Gửi thông tin">
+        <input type="reset" name="reset" class="button" value="Nhập lại">
+    </form>
+    </div>
+</body>
+</html>

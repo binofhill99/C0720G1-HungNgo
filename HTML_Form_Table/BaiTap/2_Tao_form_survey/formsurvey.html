@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formsurvey</title>
+    <link rel="stylesheet" href="../css/formsurvey.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+</head>
+<body>
+
+    <hr class="hr1">
+
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete
+        this satisfaction survey</p>
+    <hr>
+    <h4>What is your age range?</h4>
+    <select>
+        <option value="1824">18-24</option>
+        <option value="2534">25-34</option>
+        <option value="3550">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+    <h4>What is your yearly income range?</h4>
+    <select>
+        <option value="025">$0 - $25,000</option>
+        <option value="2550">$25,001 - $50,000</option>
+        <option value="50100">$50,001 - $100,000</option>
+        <option value="100+">$100,000+</option>
+    </select>
+    <h4>Gender</h4>
+    <input type="radio" name="gender" value="male">
+    <label>Male</label><br>
+    <input type="radio" name="gender" value="female">
+    <label>Female</label>
+    <h4>Which of the following products have your purchased
+    in the last 2 months. Please check all that apply.</h4>
+    <input type="checkbox" name="product" value="pro1">
+    <label>Product 1</label><br>
+    <input type="checkbox" name="product" value="pro2">
+    <label>Product 2</label><br>
+    <input type="checkbox" name="product" value="pro3">
+    <label>Product 3</label>
+    <h4>How often would you use our new product?</h4>
+    <input type="radio" name="time" value="daily">
+    <label>Daily</label><br>
+    <input type="radio" name="time" value="weekly">
+    <label>Weekly</label><br>
+    <input type="radio" name="time" value="monthly">
+    <label>Monthly</label>
+    <h4>What would you pay for the new product?</h4>
+    <label>
+    <label>$</label>
+    <input type="text1" name="$">
+    <p>Dollars</p>
+    </label>
+    <label>
+    <label>.</label>
+    <input type="text2" name="$">
+    <p>Cents</p>
+    </label>
+    <h4>What features would you like to see in the new product.</h4>
+    <textarea></textarea>
+    <p>Please rate your level of agreement with the following statements.</p>
+    <table>
+        <tr>
+            <th></th>
+            <th class="th"><h5>Strongly Disagree</h5></th>
+            <th class="th"><h5>Disagree</h5></th>
+            <th class="th"><h5>Agree</h5></th>
+            <th class="th"><h5>Strongly Agree</h5></th>
+
+        </tr>
+        <tr>
+            <td><h4>Our products are priced fairly.</h4></td>
+            <td>
+                <input type="radio" name="level" value="1">
+                <p>1</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="2">
+                <p>2</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="3">
+                <p>3</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="4">
+                <p>4</p>
+            </td>
+        </tr>
+        <tr class="row3">
+            <td><h4>Our products are high quality.</h4></td>
+            <td>
+                <input type="radio" name="level" value="1">
+                <p>1</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="2">
+                <p>2</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="3">
+                <p>3</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="4">
+                <p>4</p>
+            </td>
+        </tr>
+        <tr>
+            <td><h4>You would recommend our product to
+                a friend or coworker.</h4></td>
+            <td>
+                <input type="radio" name="level" value="1">
+                <p>1</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="2">
+                <p>2</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="3">
+                <p>3</p>
+            </td>
+            <td>
+                <input type="radio" name="level" value="4">
+                <p>4</p>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" name="submit" value="Submit">
+
+
+</body>
+</html>

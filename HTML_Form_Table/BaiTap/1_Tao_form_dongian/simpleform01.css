@@ -1,0 +1,53 @@
+
+body{
+    text-align: center;
+    margin: auto 20%;
+
+}
+input[type=text]{
+    width: 30%;
+    margin: 8px 0;
+    padding: 5px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+
+#email{
+    margin-left: 2%;
+
+}
+
+.n,.e{
+    color: blue;
+}
+#name{
+    width: 40%;
+}
+p{
+
+    color: blue;
+}
+h1 {
+    background-color: red;
+    color: white;
+
+}
+div {
+    border-radius: 5px;
+    padding: 20px;
+}
+.pick{
+    margin-top: -4%;
+    margin-left: 4%;
+}
+.h{
+    color: orange;
+}
+.button{
+
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
