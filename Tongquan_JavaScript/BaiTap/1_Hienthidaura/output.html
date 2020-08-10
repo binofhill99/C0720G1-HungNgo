@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>output</title>
+</head>
+<body>
+    <input onclick="showMessage()" type="button" value="Click">
+
+    <div id="demo"></div>
+    <button  onclick="showMessage2()" type="button">ClickMe</button>
+
+    <button onclick="showMessage3()" type="button">ClickMee</button>
+    <button onclick="showMessage4()" type="button">ClickMeee</button>
+</body>
+
+<script>
+    function showMessage() {
+        alert("Xin Chào!");
+    }
+
+    function showMessage2() {
+        document.getElementById("demo").innerText="Hello!";
+    }
+
+    function showMessage3() {
+        document.write("Hi!");
+    }
+    function showMessage4() {
+        console.log("Helloo!");
+    }
+</script>
+</html>
