@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>request1</title>
+</head>
+<body>
+    <h3>Nhập vào thông tin</h3>
+    <input type="button" onclick="input()">
+
+
+
+<script>
+    function input(){
+    let name = prompt("Nhâp vào tên khách hàng");
+    let idCard = prompt("Nhâp vào số CMND khách hàng");
+    let birthday = prompt("Nhâp vào ngày tháng năm sinh");
+    let email = prompt("Nhâp vào email khách hàng");
+    let address = prompt("Nhâp vào địa chỉ khách hàng");
+    let customerType = prompt("Nhâp vào loại khách hàng");
+    let discount = prompt("Nhâp vào % giảm giá");
+    let customerNumber = prompt("Nhâp vào số người đi kèm");
+    let rentDays = prompt("Nhâp vào số ngày thuê");
+    let serviceType = prompt("Nhập vào loại dịch vụ");
+    let roomType = prompt("Nhập vào loại phòng thuê");
+
+    let total = 0;
+    if(roomType=="Villa"){
+        total = 500 * rentDays * ((100 - discount)/100);
+    }
+    else
+        if(roomType="House"){
+            total = 300 * rentDays * ((100 - discount)/100);
+        }
+    else
+        if(roomType="Room"){
+            total = 100 * rentDays * ((100 - discount)/100);
+        }
+
+        document.write("<br/>");
+        document.write("Tên khách hàng: " +name);
+        document.write("<br/>");
+        document.write("Số CMND: " +idCard);
+        document.write("<br/>");
+        document.write("Ngày tháng năm sinh: " +birthday);
+        document.write("<br/>");
+        document.write("Email: " +email);
+        document.write("<br/>");
+        document.write("Địa chỉ: " +address);
+        document.write("<br/>");
+        document.write("Loại khách hàng: " +customerType);
+        document.write("<br/>");
+        document.write("% giảm giá: " +discount);
+        document.write("<br/>");
+        document.write("Số người đi kèm: " +customerNumber);
+        document.write("<br/>");
+        document.write("Số ngày thuê: " +rentDays);
+        document.write("<br/>");
+        document.write("Loại dịch vụ: " +serviceType);
+        document.write("<br/>");
+        document.write("Loại phòng thuê: " +roomType);
+        document.write("<br/>");
+        document.write("Giá sau khi đã được giảm: " +total);
+
+
+    }
+
+</script>
+</body>
+</html>
