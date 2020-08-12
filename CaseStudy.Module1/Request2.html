@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>request2</title>
+</head>
+<body>
+    <h2>Nhập Thông Tin</h2>
+    <form>
+        <label>Họ Tên</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label>Số CMND</label>
+        <input type="text" name="card" id="card">
+        <br>
+        <label>Ngày Tháng Năm Sinh</label>
+        <input type="text" name="date" id="date">
+        <br>
+        <label>Email</label>
+        <input type="text" name="email" id="email">
+        <br>
+        <label>Địa chỉ</label>
+        <input type="text" name="address" id="address">
+        <br>
+        <label>Loại Customer</label>
+        <select id="customerType">
+            <option>Diamond</option>
+            <option>Platinum</option>
+            <option>Gold</option>
+            <option>Silver</option>
+            <option>Member</option>
+        </select>
+        <br>
+        <label>Giảm giá(%)</label>
+        <input type="text" name="discount" id="discount">
+        <br>
+        <label>Số lượng khách đi kèm</label>
+        <input type="text" name="customerNumber" id="customerNumber">
+        <br>
+        <label>Số ngày thuê</label>
+        <input type="text" name="rentDays" id="rentDays">
+        <br>
+        <label>Loại phòng thuê</label>
+        <select id="serviceType">
+            <option>Villa</option>
+            <option>House</option>
+            <option>Room</option>
+
+        </select>
+        <br>
+        <label>Loại dịch vụ</label>
+        <select id="roomType">
+            <option>Vip</option>
+            <option>Business</option>
+            <option>Normal</option>
+
+        </select>
+        <br>
+        <input onclick="Nhap()" type="submit" value="Xác nhận" src="Request2_ShowInfo.html">
+        <input type="reset" value="Reset">
+    </form>
+
+
+
+    <script src="Request2.js">
+
+
+
+
+    </script>
+</body>
+</html>

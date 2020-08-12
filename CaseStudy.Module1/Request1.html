@@ -6,7 +6,7 @@
 </head>
 <body>
     <h3>Nhập vào thông tin</h3>
-    <input type="button" onclick="input()">
+    <input type="button" onclick="input()" value="Input">
 
 
 
@@ -28,14 +28,12 @@
     if(roomType=="Villa"){
         total = 500 * rentDays * ((100 - discount)/100);
     }
-    else
-        if(roomType="House"){
+    else if(roomType="House"){
             total = 300 * rentDays * ((100 - discount)/100);
-        }
-    else
-        if(roomType="Room"){
+    }
+    else if(roomType="Room"){
             total = 100 * rentDays * ((100 - discount)/100);
-        }
+    }
 
         document.write("<br/>");
         document.write("Tên khách hàng: " +name);
