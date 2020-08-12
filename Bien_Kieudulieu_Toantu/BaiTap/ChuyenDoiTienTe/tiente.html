@@ -3,35 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>tiente</title>
+    <style>
+        form{
+            display: flex;
+        }
+        label{
+            width: 30%;
+        }
+        input[type="button"]{
+            margin-top: 15%;
+        }
+    </style>
 </head>
 <body>
+    <form>
     <label>
         <h3>Amount</h3>
-        <input type="text">
+        <input type="text" id="soVao" value="1">
     </label>
     <label>
-        <h3 id="from">From Currency</h3>
-        <select>
-            <option id="vnd">VietNam</option>
-            <option id="usd">USD</option>
+        <h3>From Currency</h3>
+        <select id="fCurrency">
+            <option id="vnInput">VietNam</option>
+            <option id="usdInput">USD</option>
         </select>
     </label>
     <label>
-        <h3 id="to">To Currency</h3>
-        <select>
-            <option>VietNam</option>
-            <option>USD</option>
+        <h3>To Currency</h3>
+        <select id="tCurrency">
+            <option id="vnOutput">VietNam</option>
+            <option id="usdOutput">USD</option>
         </select>
     </label>
-    <button onclick="change()">Convert</button>
-
-    <p id=""></p>
+        <label>
+    <input type="button" onclick="change()" value="Convert">
+        </label>
+    </form>
+    <p id="demo"></p>
 
 
 <script>
     function change() {
-        let vnd = document.getElementById();
-        let usd;
+
+        let vnInput = document.getElementById("vnInput").value;
+        let usdInput = document.getElementById("usdInput").value;
+        let vnOutput = document.getElementById("vnOutput").value;
+        let usdOutput = document.getElementById("usdOutput").value;
+        let fCurrency = document.getElementById("fCurrency").value;
+        let tCurrency = document.getElementById("tCurrency").value;
+
+        let soVao = document.getElementById("soVao").value;
+
+
+        let ketqua=0;
+
+
+        if (fCurrency == vnInput && tCurrency == usdOutput) {
+            ketqua = soVao / 23000;
+            document.getElementById("demo").innerHTML = "Result: " + ketqua +" USD";
+        } else if (fCurrency == usdInput && tCurrency == vnOutput) {
+            ketqua = soVao * 23000;
+            document.getElementById("demo").innerHTML = "Result: " + ketqua +" VND";
+        }
 
     }
 </script>
