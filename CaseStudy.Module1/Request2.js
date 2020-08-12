@@ -8,11 +8,11 @@ function Nhap() {
     let email = document.getElementById("email").value;
     let address = document.getElementById("address").value;
     let customerType = document.getElementById("customerType").value;
-    let discount = document.getElementById("discount").value;
+    let discountt = document.getElementById("discount").value;
     let customerNumber = document.getElementById("customerNumber").value;
     let rentDays = document.getElementById("rentDays").value;
 
-    let roomType = document.getElementById("roomType").value;
+    let roomTypee = document.getElementById("roomType").value;
     let serviceType = document.getElementById("serviceType").value;
 
 
@@ -28,24 +28,24 @@ function Nhap() {
     document.write("<br/>")
     document.write("Loại KH: " + customerType);
     document.write("<br/>")
-    document.write("Giảm giá: " + discount);
+    document.write("Giảm giá: " + discountt);
     document.write("<br/>")
     document.write("Số lượng KH: " + customerNumber);
     document.write("<br/>")
     document.write("Số ngày thuê: " + rentDays);
     document.write("<br/>")
-    document.write("Loại phòng thuê: " + roomType);
+    document.write("Loại phòng thuê: " + roomTypee);
     document.write("<br/>")
     document.write("Loại dịch vụ: " + serviceType);
     document.write("<br/>")
 
     let total = 0;
-    if (roomType = "Villa") {
-        total = 500 * rentDays * ((100 - discount) / 100);
-    } else if (roomType = "House") {
-        total = 300 * rentDays * ((100 - discount) / 100);
-    } else if (roomType = "Room") {
-        total = 100 * rentDays * ((100 - discount) / 100);
+    if (roomTypee == "Villa") {
+        total = 500 * rentDays * ((100 - discountt) / 100);
+    } else if (roomTypee == "House") {
+        total = 300 * rentDays * ((100 - discountt) / 100);
+    } else if (roomTypee == "Room") {
+        total = 100 * rentDays * ((100 - discountt) / 100);
     }
 
     document.write("Tổng tiền phải trả sau khi đã được giảm giá: " +total);
