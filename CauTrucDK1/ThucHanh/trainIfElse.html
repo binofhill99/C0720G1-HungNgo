@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trainIfElse</title>
+</head>
+<body>
+<h2>What is the “official” name of JavaScript?</h2>
+<input type="text" id="traloi" value="??">
+<input type="button" onclick="kiemtra()" value="Kiemtra">
+
+<p id="show"></p>
+<script>
+    function kiemtra() {
+        let answer = document.getElementById("traloi").value;
+
+        if (answer == "ECMAScript") {
+            document.getElementById("show").innerHTML = "Right!"
+        } else {
+            document.getElementById("show").innerHTML = "Didn’t know? ECMAScript!"
+        }
+    }
+</script>
+</body>
+</html>

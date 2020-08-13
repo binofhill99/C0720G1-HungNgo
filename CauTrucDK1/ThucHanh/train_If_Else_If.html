@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IfElseIf</title>
+</head>
+
+
+<body>
+<h2>Nhập tên vào</h2>
+<input type="text" id="ten">
+<br>
+<input type="text" id="matKhau">
+<br>
+<input type="button" onclick="xacNhan()" value="Xác nhận">
+
+<p id="show"></p>
+<script>
+    function xacNhan() {
+        let tenn = document.getElementById("ten").value;
+        let matkhauu = document.getElementById("matKhau").value;
+
+
+        if (tenn == "Admin") {
+            document.getElementById("show").innerHTML = "Yêu cầu nhập mật khẩu!"
+            if (tenn == "Admin" && matkhauu == "TheMaster"){
+                document.getElementById("show").innerHTML = "Welcome!"
+            }
+            else if( tenn == "Admin" && matkhauu == ""){
+                document.getElementById("show").innerHTML = "Canceled!Yêu cầu nhập mật khẩu!"
+            }
+            else{
+                document.getElementById("show").innerHTML = "Wrong password!"
+            }
+
+        } else if(tenn == ""){
+            document.getElementById("show").innerHTML = "canceld.!"
+        } else{
+            document.getElementById("show").innerHTML = "I don't know you!"
+        }
+    }
+</script>
+</body>
+</html>
+
+</body>
+</html>

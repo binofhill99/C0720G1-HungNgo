@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>namnhuan</title>
+</head>
+<body>
+    <input type="text" id="year" value="1">
+    <input type="button" onclick="kiemtra()" value="Kiemtra">
+
+    <p id="show"></p>
+    <script>
+        function kiemtra() {
+            let nam = document.getElementById("year").value;
+
+            if (nam % 100 == 0 && nam % 400 == 0) {
+                document.getElementById("show").innerHTML = "Đây là năm nhuận"
+            } else {
+                document.getElementById("show").innerHTML = "Đây không phải là năm nhuận"
+            }
+        }
+    </script>
+</body>
+</html>
