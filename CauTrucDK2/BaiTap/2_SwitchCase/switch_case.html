@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switchcase</title>
+</head>
+<body>
+    <input type="text" id="">
+    <input type="text">
+    <input type="button">
+    <h2 id="show" onclick="tinhSoNgay(nam,thang)"></h2>
+
+
+    <h1>Em xin tạm Off 15p ạ, e có việc ra ngoài tí ạ </h1>
+
+<script>
+
+    function getNumberOfDays(year, month) {
+        let isLeap = ((year % 4) == 0 && ((year % 100) != 0 || (year % 400) == 0));
+        return [31, (isLeap ? 29 : 28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month];
+    }
+
+    let nam = 1;
+    let thang = 2;
+
+
+
+    let ketqua = getNumberOfDays(nam,thang);
+
+
+
+    alert(ketqua);
+
+</script>
+</body>
+</html>
