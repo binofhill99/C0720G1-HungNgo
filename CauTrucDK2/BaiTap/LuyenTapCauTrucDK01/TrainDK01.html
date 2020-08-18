@@ -76,18 +76,24 @@
 
         let Đ = parseFloat(prompt("Nhập vào điểm GPA: "));
 
-        if (Đ <= 4){
+        if (Đ <= 4 && Đ >= 3){
             document.write("Giỏi");
         }
-        else if (Đ <= 3){
+        else if (Đ <= 3 && Đ >= 2){
             document.write("Khá");
         }
-        else if (Đ <= 2){
+        else if (Đ <= 2 && Đ >= 1){
             document.write("TB");
         }
-        else if (Đ <= 1){
+        else if (Đ < 1){
             document.write("Yếu")
         }
+
+
+        // Bai 6
+
+
+
 
 
 </script>

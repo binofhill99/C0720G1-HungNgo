@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>train01</title>
+</head>
+<body>
+  <h2>Guest Number</h2>
+  <button type="button" name="button" onclick="guestNumber()">PlayNow</button>
+
+<script>
+
+    // Bai1
+
+
+    // for ( let i =1;i <10; i++) {
+    //
+    //     alert(i);
+    //     if(i==9){
+    //         alert(": Đã hoàn thành");
+    //     }
+    //     }
+
+    // Bai 2
+
+      // let i;
+    // for (i=0;i<=20;i++){
+    //     alert("yeu cau tang len");
+    //     i = prompt("nhiet do hien tai la");
+    //
+    // }
+    // for(i=100;i>=100;i++){
+    //     alert("yeu cau giam xuong");
+    //     i = prompt("nhiet do hien tai la");
+    // }
+
+
+
+
+
+
+    // Hien thi 20 so trong day fibonacci dau tien
+
+
+    // let a=0;
+    // let b=1;
+    // let string = a+", "+b+", ";
+    //     for(let i=3;i<=20;i++){
+    //         c=a+b;
+    //         string +=c+", ";
+    //         a=b;
+    //         b=c;
+    //
+    //     }
+    //     alert(string);
+
+
+
+
+
+
+
+    // Tim so dau tien trong day fibonacci chia het cho 5
+
+    // let a=0;
+    // let b=1;
+    // let string = a+", "+b+", ";
+    // for(let i=3;i<=20;i++){
+    //     c=a+b;
+    //     string +=c+", ";
+    //     a=b;
+    //     b=c;
+    //     if(c % 5 ==0){
+    //         alert("So dau tien trong day Fibonacci chia het cho 5 la: "+c);
+    //         break;
+    //     }
+    // }
+
+
+
+    // Tinh tong 20 so dau tien trong day fibonacci
+
+    // let a=0;
+    // let b=1;
+    // let string = a+", "+b+", ";
+    // for(let i=3;i<=10;i++){
+    //     c=a+b;
+    //     string +=c+", ";
+    //     a=b;
+    //     b=c;
+    //     total = parseInt(a+b+c);
+    // }
+    // alert(total);
+
+
+
+    // Tinh tong 30 so chia het cho 7 dau tien trong cac so tu nhien
+
+
+
+
+    // let count =0;
+    // let N =1;
+    // let string="";
+    // while (count < 30) {
+    //     for (let i = 1; i < N; i++) {
+    //         if (N % 7 == 0) {
+    //             string += N + ",";
+    //         }
+    //
+    //     }
+    //     N++;
+    //     alert(string);
+    // }
+
+
+    // Bai 7
+
+    // let string ="";
+    //
+    // for( let i=1;i<=100;i++){
+    //     if(i%3==0 && i%5==0){
+    //         string +="FizzBuzz,";
+    //     }
+    //     else if(i%5==0){
+    //         string += "Buzz,";
+    //     }
+    //     else if(i%3==0){
+    //         string += "Fizz,";
+    //     }
+    //     else{
+    //         string += i +",";
+    //     }
+    // }
+    // document.write(string);
+
+
+
+
+    // Bai 8: Game doan so
+
+    function guestNumber() {
+        let firstNum = parseInt(prompt("Khoang doan bat dau tu so: "));
+        let endNum = parseInt(prompt("Khoang doan ket thuc voi so"));
+        let random = Math.ceil((endNum - firstNum)*Math.random())+firstNum;
+        for(let i=1;i<=3;i++){
+            let guestNum = parseInt(prompt("Nhap so ban can du doan?"));
+            if(guestNum == random){
+                alert("Ban da doan dung");
+                break;
+            } else if (guestNum<random) {
+                alert("So ban nhap nho hon so can du doan. Nhap lai");
+            }else{
+                alert("So ban nhap nho hon so can du doan. Nhap lai");
+            }
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

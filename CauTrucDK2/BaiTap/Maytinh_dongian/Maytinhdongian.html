@@ -3,28 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Máy tính đơn giản</title>
+    <style>
+        input[type=text]{
+            width: 170px;
+            height: 35px;
+            font-size: 20px;
+        }
+        input[type=button]{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
 </head>
 <body>
 <div style="width: 210px">
     <form>
         <fieldset >
-            <input type="text" id="windown" name="windown"value="" style="width: 170px; height: 35px; font-size: 20px"><br/><br/>
-            <input type="button" value="1" onclick="number1()" style="width: 40px; height: 40px">
-            <input type="button" value="2" onclick="number2()"style="width: 40px; height: 40px">
-            <input type="button" value="3" onclick="number3()"style="width: 40px; height: 40px">
-            <input type="button" value="+" onclick="add()"style="width: 40px; height: 40px"><br/><br/>
-            <input type="button" value="4" onclick="number4()"style="width: 40px; height: 40px">
-            <input type="button" value="5" onclick="number5()"style="width: 40px; height: 40px">
-            <input type="button" value="6" onclick="number6()"style="width: 40px; height: 40px">
-            <input type="button" value="-" onclick="sub()"style="width: 40px; height: 40px"><br/><br/>
-            <input type="button" value="7" onclick="number7()"style="width: 40px; height: 40px">
-            <input type="button" value="8" onclick="number8()"style="width: 40px; height: 40px">
-            <input type="button" value="9" onclick="number9()"style="width: 40px; height: 40px">
-            <input type="button" value="X" onclick="mul()"style="width: 40px; height: 40px"><br/><br/>
-            <input type="button" value="C" onclick="clr()"style="width: 40px; height: 40px">
-            <input type="button" value="0" onclick="number0()"style="width: 40px; height: 40px">
-            <input type="button" value="=" onclick="equ()"style="width: 40px; height: 40px">
-            <input type="button" value="/" onclick="div()"style="width: 40px; height: 40px"><br/><br/>
+            <input type="text" id="windown" name="windown" value=""><br/><br/>
+            <input type="button" value="1" onclick="number1()">
+            <input type="button" value="2" onclick="number2()">
+            <input type="button" value="3" onclick="number3()">
+            <input type="button" value="+" onclick="add()"><br/><br/>
+            <input type="button" value="4" onclick="number4()">
+            <input type="button" value="5" onclick="number5()">
+            <input type="button" value="6" onclick="number6()">
+            <input type="button" value="-" onclick="sub()"><br/><br/>
+            <input type="button" value="7" onclick="number7()">
+            <input type="button" value="8" onclick="number8()">
+            <input type="button" value="9" onclick="number9()">
+            <input type="button" value="X" onclick="mul()"><br/><br/>
+            <input type="button" value="C" onclick="clr()">
+            <input type="button" value="0" onclick="number0()">
+            <input type="button" value="=" onclick="equ()">
+            <input type="button" value="/" onclick="div()"><br/><br/>
         </fieldset>
     </form>
 </div>

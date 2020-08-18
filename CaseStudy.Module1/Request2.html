@@ -3,140 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <title>request2</title>
+
 </head>
-<body onload ="showChoice()">
-<!--    <h2>Nhập Thông Tin</h2>-->
-<!--    <form>-->
-<!--        <label>Họ Tên</label>-->
-<!--        <input type="text" name="name" id="name">-->
-<!--        <br>-->
-<!--        <label>Số CMND</label>-->
-<!--        <input type="text" name="card" id="card">-->
-<!--        <br>-->
-<!--        <label>Ngày Tháng Năm Sinh</label>-->
-<!--        <input type="text" name="date" id="date">-->
-<!--        <br>-->
-<!--        <label>Email</label>-->
-<!--        <input type="text" name="email" id="email">-->
-<!--        <br>-->
-<!--        <label>Địa chỉ</label>-->
-<!--        <input type="text" name="address" id="address">-->
-<!--        <br>-->
-<!--        <label>Loại Customer</label>-->
-<!--        <select id="customerType">-->
-<!--            <option>Diamond</option>-->
-<!--            <option>Platinum</option>-->
-<!--            <option>Gold</option>-->
-<!--            <option>Silver</option>-->
-<!--            <option>Member</option>-->
-<!--        </select>-->
-<!--        <br>-->
-<!--        <label>Giảm giá(%)</label>-->
-<!--        <input type="text" name="discount" id="discount">-->
-<!--        <br>-->
-<!--        <label>Số lượng khách đi kèm</label>-->
-<!--        <input type="text" name="customerNumber" id="customerNumber">-->
-<!--        <br>-->
-<!--        <label>Số ngày thuê</label>-->
-<!--        <input type="text" name="rentDays" id="rentDays">-->
-<!--        <br>-->
-<!--        <label>Loại phòng thuê</label>-->
-<!--        <select id="roomType">-->
-<!--            <option>Villa</option>-->
-<!--            <option>House</option>-->
-<!--            <option>Room</option>-->
-
-<!--        </select>-->
-<!--        <br>-->
-<!--        <label>Loại dịch vụ</label>-->
-<!--        <select id="serviceType">-->
-<!--            <option>Vip</option>-->
-<!--            <option>Business</option>-->
-<!--            <option>Normal</option>-->
-
-<!--        </select>-->
-<!--        <br>-->
-<!--        <input onclick="Nhap()" type="submit" value="Xác nhận" src="Request2_ShowInfo.html">-->
-<!--        <input type="reset" value="Reset">-->
-<!--    </form>-->
-
-
-
-<!--    <script src="Request2.js">-->
+<body>
 
 
 
 
-<!--    </script>-->
 
 
-    <script>
+<script>
 
-        let Customer = {
-            data : [],
-            viewCustomer : function() {
-                let listCustomer = this.data;
+        let name="Nguyen Van A";
+        let cmnd="12345";
+        let birthday="12/13/1993";
+        let email="A@gmail.com";
+        let address="Đà Nẵng";
+        let typeService="House";
+        let typeRoom="Vip";
+        let typeCustomer="Diamond";
+        let discount=10;
+        let quantityIncluded=10;
+        let rentDays=8;
+        let totalPay;
+
+    let choose=parseInt(prompt("1.Hien thi thong tin khach hang."+"\n"+
+    "2.Chinh sua thong tin khach hang"+"\n"+
+    "3.Hien thi gia sau khi duoc giam gia."));
 
 
-                for(var i = 0; i < listCustomer.length; i++){
-                    document.write("<div>" + listCustomer[i].id + "|" + listCustomer[i].name + "|" +
-                        listCustomer[i].birthDay + listCustomer[i].email + listCustomer[i].address +
-                        listCustomer[i].customerService + listCustomer[i].discount +
-                        listCustomer[i].customerNumber + listCustomer[i].rentDays + listCustomer[i].serviceType + listCustomer[i].roomType +"</div>");
+    switch(choose){
+        case 1: {
+            alert("Tên:"+name+"\n"+"cmnd:"+cmnd+"\n"+"Ngày sinh:"+birthday+"\n"+
+            "Email:"+email+"\n"+"Địa chỉ:"+address+"\n"+"Loại dịch vụ:"+typeService+"\n"+
+            "Loại phòng:"+typeRoom+"\n"+"Loại khách hàng:"+typeCustomer+"\n"+
+            "Giảm giá:"+discount+"\n"+"Số lượng đi kèm:"+quantityIncluded+"\n"+
+            "Số lượng ngày:"+rentDays);
+            break;
+        }
+        case 2: {
+            let chooseEdit = parseInt(prompt("1.Tên:" + name + "\n" + "2.cmnd:" + cmnd + "\n" + "3.Ngày sinh:" + birthday + "\n" +
+                "4.Email:" + email + "\n" + "5.Địa chỉ:" + address + "\n" + "6.Loại dịch vụ:" + typeService + "\n" +
+                "7.Loại phòng:" + typeRoom + "\n" + "8.Loại khách hàng:" + typeCustomer + "\n" +
+                "9.Giảm giá:" + discount + "\n" + "10.Số lượng đi kèm:" + quantityIncluded + "\n" +
+                "11.Số lượng ngày:" + rentDays));
+
+            switch (chooseEdit) {
+                case 1: {
+                    name = prompt("Enter name: ");
+                    break;
                 }
-
-            },
-            addCustomer: function (id, name, birthDay, email, address, customerService, discount, customerNumber, rentDays, serviceType, roomType) {
-
-                let item = {
-
-                    id : id,
-                    name : name,
-                    birthDay : birthDay,
-                    email : email,
-                    address : address,
-                    customerService : customerService,
-                    discount : discount,
-                    customerNumber : customerNumber,
-                    rentDays : rentDays,
-                    serviceType : serviceType,
-                    roomType: roomType
-                };
-                this.data.push(item);
-            },
-            editCustomer : function (id, name, birthDay, email, address, customerService, discount, customerNumber, rentDays, serviceType, roomType) {
-                for(var i = 0; i < this.data.length; i++){
-                    if (this.data[i].id === id ){
-                        this.data[i].name = name;
-                        this.data[i].birthDay = birthDay;
-                        this.data[i].email = email;
-                        this.data[i].address = address;
-                        this.data[i].customerService = customerService;
-                        this.data[i].discount = discount;
-                        this.data[i].customerNumber = customerNumber;
-                        this.data[i].rentDays = rentDays;
-                        this.data[i].serviceType = serviceType;
-                        this.data[i].roomType = roomType;
-                    }
+                case 2: {
+                    cmnd = prompt("Enter cmnd: ");
+                    break;
                 }
+                case 3: {
+                    birthday = prompt("Enter birthday: ");
+                    break;
+                }
+                case 4: {
+                    email = prompt("Enter email: ");
+                    break;
+                }
+                case 5: {
+                    address = prompt("Enter address: ");
+                    break;
+                }
+                case 6: {
+                    typeService = prompt("Enter typeService: ");
+                    break;
+                }
+                case 7: {
+                    typeRoom = prompt("Enter typeRoom: ");
+                    break;
+                }
+                case 8: {
+                    typeCustomer = prompt("Enter typeCustomer: ");
+                    break;
+                }
+                case 9: {
+                    discount = prompt("Enter discount: ");
+                    break;
+                }
+                case 10: {
+                    quantityIncluded = prompt("Enter quantityIncluded: ");
+                    break;
+                }
+                case 11: {
+                    rentDays = prompt("Enter rentDays: ");
+                    break;
+                }
+                default: {
+                    alert("Failed")
+                }
+            }
+            alert("Tên:" + name + "\n" + "cmnd:" + cmnd + "\n" + "Ngày sinh:" + birthday + "\n" +
+                "Email:" + email + "\n" + "Địa chỉ:" + address + "\n" + "Loại dịch vụ:" + typeService + "\n" +
+                "Loại phòng:" + typeRoom + "\n" + "Loại khách hàng:" + typeCustomer + "\n" +
+                "Giảm giá:" + discount + "\n" + "Số lượng đi kèm:" + quantityIncluded + "\n" +
+                "Số lượng ngày:" + rentDays);
+            break;
+        }
+        case 3: {
+            let currentYear = new Date().getFullYear();
+            let birthdayy = new Date(birthday).getFullYear();
+            let ageCustomer = currentYear - birthdayy;
+            // giam gia theo loai dich vu
+            let money=0;
+            if(typeService==="Villa"){
+                money=500;
+            } else if(typeService==="House"){
+                money=300;
+            } else if(typeService==="Room"){
+                money=100;
+            }
+            // giam gia theo dia chi va tuoi
+            let temp=0;
+            if(address==="Đà Nẵng"){
+
+                if( ageCustomer>30){
+                    temp += 2;
+                } else if(ageCustomer>20){
+                    temp += 1;
+                } else{
+                    temp += 20;
+                }
+            } else if(address==="Huế"){
+                temp += 10;
+            } else if(address==="Quảng Nam"){
+                temp += 5;
+            }
+            // giam gia theo so ngay thue
+            if (rentDays > 7){
+                temp += 30;
+            } else if(rentDays >5){
+                temp += 20;
+            } else  if(rentDays > 2){
+                temp += 10;
+            }
+            // giam gia theo loai Customer
+            if(typeCustomer==="Diamond"){
+                temp += 15;
+            } else if(typeCustomer==="Platium"){
+                temp += 10;
+            } else if(typeCustomer==="Gold"){
+                temp += 5;
+            } else if(typeCustomer==="Silver"){
+                temp += 2;
+            } else  if(typeCustomer==="Member"){
+                temp += 0;
             }
 
 
 
-        };
 
-        document.write("<h3>Danh sách khách hàng ban đầu</h3>");
-        Customer.viewCustomer();
-
-
-        document.write("<h4>Danh sách khách hàng sau khi thêm</h4>");
-        Customer.addCustomer("454242", "Nguyễn Văn A","02/03/1990","A@gmail.com","45 tran phu","Vip","10%","5","7","Villa","Vip");
-        Customer.viewCustomer();
-
-
-
-
-
+            alert("Total pay: "+(money*rentDays-temp));
+            break;
+        }
+        default: {
+            alert("Su lua chon cua ban khong co trong trinh don")
+        }
+    }
     </script>
 
 
