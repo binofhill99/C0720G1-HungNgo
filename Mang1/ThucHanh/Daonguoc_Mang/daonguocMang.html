@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>daonguocMang</title>
+</head>
+<body>
+
+
+    <script>
+        let daonguoc = ["A","B","C","D","E"];
+        // daonguoc.reverse();
+
+        let first = 0;
+        let last = daonguoc.length - 1;
+
+        while (first < last){
+            let b = daonguoc[first];
+            daonguoc[first] = daonguoc[last];
+            daonguoc[last] = b;
+            first++;
+            last--;
+        }
+
+        document.write(daonguoc);
+    </script>
+</body>
+</html>

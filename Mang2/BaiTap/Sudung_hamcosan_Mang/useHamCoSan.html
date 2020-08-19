@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>usehamcoSan</title>
+</head>
+<body>
+    <script>
+
+
+        // bai 1
+
+        // let myColor = ["Red","Green","White","Black"];
+        //
+        // let A = myColor.join();
+        // document.write(A)
+
+
+        // bai 2
+
+        // let nums = prompt("Nhap vao mot so");
+        // let str = nums.toString();
+        // let result = [str[0]];
+        //
+        // for(let i =1; i < str.length; i++){
+        //     if((str[i-1]%2 === 0)&&(str[i]%2 === 0)){
+        //         result.push("-", str[i]);
+        //     }
+        //     else {
+        //         result.push(str[i]);
+        //     }
+        // }
+        // console.log(result.join(""));
+
+
+        // bai 3
+
+        let str = "ngOMInhHunG";
+        let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let LOWER = "abcdefghijklmnopqrstuvwxyz";
+        let result = [];
+
+            for(let i=0;i<str.length;i++){
+                if(UPPER.indexOf(str[i]) !== -1){
+                    result.push(str[i].toLowerCase());
+                }
+                else  if(LOWER.indexOf(str[i]) !== -1){
+                    result.push(str[i].toUpperCase());
+                }
+                else {
+                    result.push(str[i]);
+                }
+            }
+            console.log(result.join(""));
+
+
+
+
+
+        //nhap 1 phan tu bat ky vao mot vi tri bat ky trong 1 mang
+
+
+        // let mang = [5,10,15,20,25,30];
+        // let soMuonChen = parseInt(prompt("Nhap so muon chen:"));
+        // let viTriMuonChen = parseInt(prompt("Nhap vi tri muon chen:"));
+        // if (viTriMuonChen < mang.length) {
+        //     for (let i=mang.length; i>viTriMuonChen; i--) {
+        //         mang[i] = mang[i-1];
+        //     }
+        //     mang[viTriMuonChen] = soMuonChen;
+        //     document.write(mang);
+        // }
+        // else alert("sai vi tri muon chen");
+
+
+
+
+    </script>
+</body>
+</html>

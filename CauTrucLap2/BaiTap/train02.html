@@ -26,12 +26,41 @@
 
         // Bai 2 Tinh giai thua cua mot so nguyen duong
 
-        let a = parseInt(prompt("Nhap vao mot so nguyen duong: "));
+        // let a = parseInt(prompt("Nhap vao mot so nguyen duong: "));
+        // let ketqua = 1;
+        // for(a;a>0;a--){
+        //     ketqua = ketqua * a;
+        // }
+        // document.write(ketqua);
 
-        while(a>0){
-            
+
+        // Bai 3 In tam giac vuong
+
+        // let N =parseInt(prompt("Nhap N:"))
+        //
+        // for(let i=0;i<N;i++){
+        //     for(let j=0;j<=i;j++){
+        //         document.write("*");
+        //     }
+        //     document.write("<br/>");
+        // }
+
+        // Bai 4 In hinh chu nhat
+
+        let n = parseInt(prompt("Nhap n"));
+        let m = parseInt(prompt("Nhap m"));
+
+        for(let i=1;i<=n;i++){
+            for(let k=1;k<=m;k++){
+                if(i==1||k==1||i==n||k==m){
+                    document.write("*");
+                }
+                else {
+                    document.write(" ");
+                }
+            }
+            document.write("<br/>");
         }
-
 
     </script>
 </body>
